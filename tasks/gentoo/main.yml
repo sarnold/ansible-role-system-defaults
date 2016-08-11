@@ -4,7 +4,7 @@
 
 - name: install default packages
   become: yes
-  portage: package="www-servers/apache" state="present" newuse=yes update=yes
+  portage: package="{{ item }}" state="present" newuse=yes update=yes
   with_items:
     - app-editors/vim
     - dev-vcs/git
