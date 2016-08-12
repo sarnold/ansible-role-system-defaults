@@ -2,10 +2,14 @@
 
 # install default packages
 
-- name: install default packages
-  become: yes
-  portage: package="{{ item }}" state="present" newuse=yes update=yes
-  with_items:
-    - app-editors/vim
-    - dev-vcs/git
-    - sys-process/htop
+- include: ../../../portage/tasks/gentoo/main.yml
+  vars:
+    portage_configuration:
+      - section: "package.use"
+        file: "git"
+        entries:
+          - "dev-vcs/git -perl -gpg -webdav"
+    portage_packages:
+      - { package: "app-editors/vim" }
+      - { package: "dev-vcs/git" }
+      - { package: "sys-process/htop" }
