@@ -10,6 +10,7 @@
         entries:
           - "dev-vcs/git -perl -gpg -webdav"
     portage_packages:
+      - { package: "app-admin/sudo" }
       - { package: "app-editors/vim" }
       - { package: "dev-vcs/git" }
       - { package: "sys-process/htop" }
