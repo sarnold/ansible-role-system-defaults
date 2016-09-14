@@ -1,2 +1,38 @@
-# ansible-role-defaults
-My default apps and configuration which I do not want to miss.
+Ansible Role for managing default stuff
+=======================================
+
+My default apps and configuration stuff I do not want to miss.
+
+Requirements
+------------
+
+None.
+
+Role Variables
+--------------
+
+None.
+
+Dependencies
+------------
+
+None.
+
+Example Playbook
+----------------
+```
+- hosts: all
+  roles:
+    - role: system-defaults
+```
+
+License
+-------
+
+MIT
+
+Author Information
+------------------
+
+- You can find more roles in my GitHub channel [vundb](https://github.com/vundb)
+- Follow me on Twitter [@vundb](https://twitter.com/vundb)
