@@ -3,6 +3,12 @@ Ansible Role for managing default stuff
 
 My default apps and configuration stuff I do not want to miss.
 
+Supported Distributions
+-----------------------
+
+- Gentoo
+- CentOS 7
+
 Requirements
 ------------
 
