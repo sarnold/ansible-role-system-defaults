@@ -9,6 +9,7 @@
     - sudo
     - vim
     - git
+    - tree
 
 
 # installing this packages within the loop at the top caused an error

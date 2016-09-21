@@ -14,3 +14,4 @@
       - { package: "app-editors/vim" }
       - { package: "dev-vcs/git" }
       - { package: "sys-process/htop" }
+      - { package: "app-text/tree" }
