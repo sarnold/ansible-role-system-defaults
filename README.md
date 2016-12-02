@@ -1,4 +1,4 @@
-Ansible Role for managing default stuff
+Ansible Role System Defaults
 =======================================
 
 My default apps and configuration stuff I do not want to miss.
@@ -9,11 +9,6 @@ Supported Distributions
 - Gentoo
 - CentOS 7
 
-Requirements
-------------
-
-None.
-
 Role Variables
 --------------
 
@@ -22,7 +17,7 @@ None.
 Dependencies
 ------------
 
-None.
+[vundb/ansible-role-portage](https://github.com/vundb/ansible-role-portage)
 
 Example Playbook
 ----------------
