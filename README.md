@@ -24,7 +24,7 @@ Example Playbook
 ```
 - hosts: all
   roles:
-    - role: system-defaults
+    - role: vundb-system-defaults
 ```
 
 License
