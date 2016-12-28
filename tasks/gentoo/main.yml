@@ -10,6 +10,7 @@
         entries:
           - "dev-vcs/git -perl -gpg -webdav"
     portage_packages:
+      - { package: "sys-libs/ncurses", state: "unmerged" }
       - { package: "app-admin/sudo" }
       - { package: "app-editors/vim" }
       - { package: "dev-vcs/git" }
