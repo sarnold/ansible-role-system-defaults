@@ -1,5 +1,10 @@
 ---
 
+# check if sys-libs/ncurses upgrade is needed
+
+- include: upgrade-ncurses.yml
+
+
 # install default packages
 
 - include: ../../../vundb-portage/tasks/gentoo/main.yml
@@ -10,7 +15,6 @@
         entries:
           - "dev-vcs/git -perl -gpg -webdav"
     portage_packages:
-      - { package: "sys-libs/ncurses", state: "unmerged" }
       - { package: "app-admin/sudo" }
       - { package: "app-editors/vim" }
       - { package: "dev-vcs/git" }

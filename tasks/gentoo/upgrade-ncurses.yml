@@ -1,0 +1,33 @@
+---
+
+# check for currently installed ncurses version
+
+- name: check for ncurses version
+  shell: equery --quiet list sys-libs/ncurses | sed 's/sys-libs\/ncurses-//g'
+  register: ncurses_version
+
+# as default upgrade is true
+
+- set_fact:
+    ncurses_upgrade: true
+
+# set upgrade to false if ncurses version is greather than 6.0
+
+- set_fact:
+    ncurses_upgrade: false
+  when: (ncurses_version.stdout_lines | length | int > 0) and (item | version_compare('6.0', '>='))
+  with_items: ncurses_version.stdout_lines
+
+# if upgrade is needed first unmerge ncurses
+
+- name: unmerge sys-libs/ncurses
+  become: yes
+  portage: package="sys-libs/ncurses" state="unmerged"
+  when: ncurses_upgrade
+
+# if upgrade is needed emerge latest ncurses version
+
+- name: emerge sys-libs/ncurses
+  become: yes
+  portage: package="sys-libs/ncurses" state="emerged" newuse="yes" update="yes"
+  when: ncurses_upgrade
