@@ -1,8 +1,8 @@
 ---
 
-# check if sys-libs/ncurses upgrade is needed
-
-- include: upgrade-ncurses.yml
+## check if sys-libs/ncurses upgrade is needed
+#
+#- import_tasks: upgrade-ncurses.yml
 
 
 # install default packages
