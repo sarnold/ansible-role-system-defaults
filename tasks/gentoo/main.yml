@@ -7,7 +7,7 @@
 
 # install default packages
 
-- include: ../../../vundb-portage/tasks/gentoo/main.yml
+- import_tasks: ../../../vundb-portage/tasks/gentoo/main.yml
   vars:
     portage_configuration:
       - section: "package.use"
