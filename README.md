@@ -7,7 +7,6 @@ Supported Distributions
 -----------------------
 
 - Gentoo
-- CentOS 7
 
 Role Variables
 --------------
